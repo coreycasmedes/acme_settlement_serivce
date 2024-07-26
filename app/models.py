@@ -9,6 +9,12 @@ class SettlementRequest(BaseModel):
     merchant_id: str
     settlement_date: date
 
+class SettlementResponse(BaseModel):
+    merchant_id: str
+    settlement_date: date
+    settlement_amount: Decimal
+    transaction_count: int
+
 class TransactionType(Enum):
     PURCHASE = "PURCHASE"
     REFUND = "REFUND"
@@ -24,13 +30,3 @@ class Transaction:
     customer: str
     merchant: str
     order: str
-
-@dataclass
-class SettlementResponse:
-    merchant_id: str
-    settlement_date: date
-    settlement_amount: Decimal
-    transaction_count: int
-    successful_sales: int
-    currency: str = "USD"
-    status: str = "completed"
