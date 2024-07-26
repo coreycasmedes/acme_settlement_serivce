@@ -13,6 +13,7 @@ Clone the repository:
 ```
 git clone https://github.com/your-username/acme-settlement-service.git
 cd acme-settlement-service
+pip install -r requirements.txt
 ```
 
 Run the application:
