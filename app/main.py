@@ -1,11 +1,10 @@
 from fastapi import FastAPI
-import uvicorn
 from app.api.main import api_router
 from app.core.config import settings
-
+import uvicorn
 
 app = FastAPI(
-    title="ACME Settlements"
+    title=settings.PROJECT_NAME
 )
 
 app.include_router(api_router, prefix=settings.API_V1_STR)
