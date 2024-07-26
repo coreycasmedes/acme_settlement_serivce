@@ -34,6 +34,10 @@ Once the app is up and running, you can use the following command to ensure:
 ```
 curl -X GET "http://localhost:8000/api/v1/settlement?merchant_id=b0c9a871-f9b3-411e-b713-b5b17287f956&settlement_date=2023-01-13"
 ```
+and recieve the following response
+```
+{"merchant_id":"b0c9a871-f9b3-411e-b713-b5b17287f956","settlement_date":"2023-01-13","settlement_amount":"30787.34","transaction_count":46}%
+```
 
 
 
